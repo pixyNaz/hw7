@@ -1,0 +1,15 @@
+/Lib
+/Scripts
+pyvenv.cfg
+/__pycache__
+/.idea
+calculate.py
+lesson2_1.py
+lesson2_2.py
+lesson2_3.py
+lesson2_4.py
+lesson2_5.py
+Nazira_28_1_hw1.py
+Nazira_28_1_hw2.py
+Nazira_28_1_hw3.py
+person.py
