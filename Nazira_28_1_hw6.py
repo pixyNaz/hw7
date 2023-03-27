@@ -16,30 +16,21 @@ print(random_list_of_numbers)
 def binary_search(lst, search_num):
     low = 0
     high = len(lst) - 1
-    search_res = False
+    middle = len(lst) // 2
 
-    while low <= high and not search_res:
-        middle = (low + high) // 2
-        guess = lst[middle]
-        if guess == search_num:
-            search_res = True
-            return search_res
-        if guess > search_num:
+    while low <= high and lst[middle] != search_num:
+        if search_num > lst[middle]:
             high = middle - 1
         else:
             low = middle + 1
-        return search_res
+        middle = (low + high) // 2
+
+    if low > high:
+        print('Элемент найден!')
+    else:
+        print('Элемент не найден!')
 
 
-lst = [2, 4, 10, 13, 15, 18, 23, 26, 35, 57, 86]
+list = [2, 4, 10, 13, 15, 18, 23, 26, 35, 57, 86]
 value = 57
-result = binary_search(lst, value)
-if result:
-    print('Элемент найден!')
-else:
-    print('Элемент не найден!')
-
-
-
-
-
+result = binary_search(list, value)
